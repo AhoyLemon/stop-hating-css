@@ -1,0 +1,220 @@
+body {
+  height: 280vh;
+  background: white;
+  background-image: url("../img/grid.png");
+}
+body.gridbody {
+  height: auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.floatygrid .gridbox:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.box {
+  padding: 20px;
+  background-image: url("../img/grid.png");
+  -webkit-box-shadow: 0 0 12px black;
+          box-shadow: 0 0 12px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.box.fixed {
+  position: fixed;
+  background: #DB2B39;
+}
+.box.absolute {
+  position: absolute;
+  background: #F6F740;
+}
+.box.sticky {
+  position: sticky;
+  background: #7DCFB6;
+}
+.box.relative {
+  position: relative;
+  background: #EA9010;
+}
+.box.static {
+  position: static;
+  background: #4D9DE0;
+}
+.box.single {
+  width: 50vh;
+  height: 50vh;
+  margin-top: 300px;
+  margin-left: 360px;
+}
+.box.single.sticky {
+  top: 0;
+}
+.box.fifth {
+  width: calc(24vw - 20px);
+  height: 48vh;
+  -webkit-box-shadow: 2.8px 2.5px 2.6px -16px rgba(0, 0, 0, 0.335), 22px 20px 21px -16px rgba(0, 0, 0, 0.65);
+          box-shadow: 2.8px 2.5px 2.6px -16px rgba(0, 0, 0, 0.335), 22px 20px 21px -16px rgba(0, 0, 0, 0.65);
+}
+.box.fifth.sticky {
+  left: 80vw;
+  top: 20px;
+  margin-top: 50vh;
+}
+.box.fifth.static {
+  margin-top: -65vh;
+}
+.box.fifth.relative {
+  margin-top: 40px;
+}
+.box.fifth.fixed {
+  left: 25vw;
+  top: 50vh;
+}
+.box.fifth.absolute {
+  left: 50vw;
+  top: 5vh;
+}
+.box code {
+  font-size: 24px;
+}
+
+.float-holder {
+  padding: 20px;
+  height: auto;
+}
+.float-holder article {
+  background: #fff;
+  padding: 20px;
+  margin: 20px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+}
+.float-holder p {
+  font-size: 24px;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+.float-holder .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.float-holder .floatbox {
+  width: 25%;
+  float: left;
+}
+.float-holder .floatbox img {
+  max-width: 100%;
+}
+
+.cascade-test article {
+  background: #fff;
+  padding: 20px;
+  margin: 20px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.grid figure {
+  margin: 0;
+}
+.grid[columns="2"] {
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid .gridbox img {
+  width: 100%;
+}
+
+figure.card {
+  background: white;
+  padding: 1.25em;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+  font-size: 16px;
+}
+figure.card img {
+  margin-bottom: 20px;
+}
+figure.card p {
+  font-size: 22px;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+figure.card p:last-child {
+  margin-bottom: 0;
+}
+
+.float-left {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 2px;
+}
+
+.floatygrid {
+  margin-left: -15px;
+}
+.floatygrid .gridbox {
+  float: left;
+  width: calc(33% - 30px);
+  margin: 0 15px;
+}
+.floatygrid .gridbox img {
+  width: 100%;
+}
+
+.cocktail {
+  background: #e9f6fa;
+  padding: 2em;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.flex-container figure {
+  margin: 0;
+}
+.flex-container .flexbox {
+  -ms-flex-preferred-size: calc(33% - 20px);
+      flex-basis: calc(33% - 20px);
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  margin-bottom: 30px;
+}
+.flex-container .flexbox img {
+  width: 100%;
+}

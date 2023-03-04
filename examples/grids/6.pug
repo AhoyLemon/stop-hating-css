@@ -1,0 +1,38 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="../css/example.css")
+    title HELLO
+  body.gridbody
+
+    style.
+      .mojito, .daiquiri, .pina-colada { grid-column: span 2; grid-row:span 2; }
+
+    .grid.cocktails(style="grid-template-columns:repeat(4,1fr); padding:20px;")
+
+      .cocktail.pina-colada
+        img(src="../svg/pina-colada.svg")
+      .cocktail.screwdriver
+        img(src="../svg/screwdriver.svg")
+      .cocktail.cuba-libre
+        img(src="../svg/cuba-libre.svg")
+      .cocktail.mojito
+        img(src="../svg/mojito.svg")
+      .cocktail.b-52
+        img(src="../svg/b-52.svg")
+      .cocktail.margarita
+        img(src="../svg/margarita.svg")
+      .cocktail.daiquiri
+        img(src="../svg/daquiri.svg")
+      .cocktail.tequila-sunrise
+        img(src="../svg/tequila-sunrise.svg")
+      .cocktail.sex-on-the-beach
+        img(src="../svg/sex-on-the-beach.svg")
+      .cocktail.manhattan
+        img(src="../svg/manhattan.svg")
+      .cocktail.bloody-mary
+        img(src="../svg/bloody-mary.svg")
+      //-.cocktail.long-island
+        img(src="../svg/long-island.svg")

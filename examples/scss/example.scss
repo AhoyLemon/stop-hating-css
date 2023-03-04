@@ -1,0 +1,154 @@
+body { height:280vh; background:white; background-image:url('../img/grid.png');
+  &.gridbody { height:auto; }
+}
+
+* { box-sizing: border-box; }
+
+@mixin overlay($color:#fff) {
+  &:before { position:absolute; content:' '; top:0; right:0; bottom:0; left:0; background:$color;  mix-blend-mode: multiply; }
+}
+
+
+// COLORS
+
+$fixedBG:#DB2B39;
+$absoluteBG: #F6F740; 
+$stickyBG: #7DCFB6;
+$relativeBG: #EA9010;
+$staticBG: #4D9DE0;
+
+
+%clearfix { 
+  &:after { 
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// POSITION EXAMPLES
+
+.box { padding:20px; background-image:url('../img/grid.png'); box-shadow: 0 0 12px rgba(0,0,0,1);
+
+  &.fixed { position:fixed; background:$fixedBG; }
+  &.absolute { position: absolute; background:$absoluteBG; }
+  &.sticky { position:sticky; background:$stickyBG; }
+  &.relative { position: relative; background:$relativeBG; }
+  &.static { position: static; background:$staticBG; }
+
+  &.single { width:50vh; height:50vh; margin-top:300px; margin-left:360px;    
+    &.sticky { top:0; }
+  }
+
+  &.fifth { width:calc(24vw - 20px); height:48vh;box-shadow:
+    2.8px 2.5px 2.6px -16px rgba(0, 0, 0, 0.335),
+    22px 20px 21px -16px rgba(0, 0, 0, 0.65);
+  
+  
+    &.sticky { left:80vw; top:20px; margin-top:50vh; }
+    &.static { margin-top:-65vh; }
+    &.relative { margin-top:40px; }
+    &.fixed { left:25vw; top:50vh;}
+    &.absolute { left:50vw; top:5vh; }
+    
+    // &:nth-child(2) { left:20vw; }
+    // &:nth-child(2) { left:40vw; }
+    // &:nth-child(3) { left:60vw; }
+    // &:nth-child(4) { left:80vw; }
+    // &:nth-child(5) { left:100vw; }
+    // &.static, &.relative { float:left; }
+    // &.absolute { top:50vh; }
+    // &.fixed { top:140px; }
+    // &.absolute { left:58%; top:40px; }
+    // &.sticky { top:0; margin-top:100px; }
+  }
+
+
+
+  code { font-size:24px; }
+  display:flex; align-items: center; justify-items: center; justify-content: center;
+  
+}
+
+// FLOAT EXAMPLES
+
+.float-holder { padding:20px; height: auto;
+  article { background:#fff; padding:20px; margin:20px; box-shadow: 0 0 6px rgba(0,0,0,0.9); }
+  p { font-size:24px; margin-block-start: 0; }
+
+  .clearfix {
+    &:after { content: ""; display: table; clear: both; }
+  }
+
+  .floatbox { width:25%; float:left;
+    img { max-width: 100%; }
+  }
+}
+
+.cascade-test {
+  article { background:#fff; padding:20px; margin:20px; box-shadow: 0 0 6px rgba(0,0,0,0.9); max-width:600px; margin-left:auto; margin-right:auto; }
+}
+
+
+.grid { display:grid; grid-template-columns: repeat(3,1fr); grid-gap:30px;
+  figure { margin:0; }
+  &[columns="2"] { grid-template-columns: repeat(2,1fr); }
+  .gridbox {
+    img { width:100%; }
+  }
+}
+
+figure.card { background: white; padding:1.25em; box-shadow: 0 0 6px rgba(0,0,0,0.9); font-size:16px;
+  img { margin-bottom: 20px; }
+  p { font-size:22px; margin-block-start: 0; }
+  p:last-child { margin-bottom: 0; }
+}
+
+
+.float-left { float:left; margin-right: 20px; margin-bottom:2px; }
+
+.floatygrid { margin-left:-15px;
+  .gridbox { float:left; width:calc(33% - 30px); margin:0 15px; @extend %clearfix;
+    img { width:100%; }
+  }
+}
+
+.cocktail { background:#e9f6fa; padding:2em;
+
+}
+
+@mixin flex-container($direction:row, $wrap:wrap, $align:stretch) {
+  // display: -ms-flexbox; display: -webkit-box;
+  display: -webkit-flex; display: -moz-flex; display: flex;
+  flex-direction: $direction;
+  -webkit-flex-wrap:$wrap; -moz-flex-wrap:$wrap; 
+  flex-wrap: $wrap;
+  @if $align == flex-start { 
+    -webkit-box-align: start; -ms-flex-align: start;
+  } @else if $align == flex-end { 
+    -webkit-box-align: end; -ms-flex-align: end;
+  } @else { 
+    -webkit-box-align: $align; -ms-flex-align: $align;
+  }
+  align-items: $align;
+}
+@mixin flex-item($basis, $align:auto, $grow:1, $shrink:1) {
+  @if $grow == 0 {
+    width:$basis;
+    flex-basis: $basis;
+  } @else {
+    flex-basis: $basis;
+  }
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+  align-self: $align;
+}
+
+$gap:30px;
+
+.flex-container { display: flex; flex-wrap:wrap; justify-content: space-between;
+  figure { margin:0; }
+  .flexbox { flex-basis:calc(33% - 20px); flex-grow: 0; flex-shrink:1; margin-bottom:30px;
+    img { width: 100%; }
+  }
+}

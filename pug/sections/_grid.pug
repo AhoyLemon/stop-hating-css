@@ -1,0 +1,141 @@
+section
+
+  section
+    h1
+      code grid
+
+  section
+    h3 step 1
+    pre.fragment.huge
+      code(data-line-numbers).
+        .all-rikers { 
+          display:grid;
+          grid-template-columns: repeat(3,1fr);
+          grid-gap:30px;
+        }
+  
+  section
+    h3 step 2
+    img.fragment(src="img/gif/done.gif" style="width:600px; height:auto;")
+
+  section
+    iframe(data-src="examples/float-grid-perfect.html" style="width:100%; height:55vh !important; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+    .fragment
+      span.blink 288 bytes!
+
+  section
+    code.css.
+      grid-template-columns
+
+  section
+    pre.
+      grid-template-columns: 1fr 1fr 1fr;
+                             repeat(3, 1fr);
+                             260px 50% 1fr;
+                             repeat(auto-fill,260px);
+                             repeat(auto-fit, minmax(160px,1fr))
+  
+  section
+    pre.
+      1fr = 1 fraction
+  
+  section
+    h3 My gin and tonic:
+    ol
+      li 4 ice cubes
+      li 1 jigger of gin
+      li tonic water
+      li 1 lime wheel
+
+  section
+    .grid(columns="2")
+      .box
+        img(src="img/g-t-short.jpg")
+      .box
+        img(src="img/g-t-tall.jpg")
+
+  section
+    pre(style="font-size:2vw;").
+      grid-template-columns: 1fr 1fr;
+    .fragment
+      iframe(data-src="examples/grids/repeat-2-1fr.html" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+    aside.notes
+      p 4 different drinks
+  section
+    pre(style="font-size:2vw;").
+      grid-template-columns: repeat(4,1fr);
+    .fragment
+      iframe(data-src="examples/grids/repeat-4-1fr.html" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+  section
+    pre(style="font-size:2vw;").
+      grid-template-columns:200px 1fr 1fr;
+    .fragment
+      iframe(data-src="examples/grids/3.html" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+  section
+    pre(style="font-size:2vw;").
+      grid-template-columns:repeat(auto-fill,240px);
+    .fragment
+      iframe(data-src="examples/grids/4.html" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+  section
+    pre(style="font-size:2vw;").
+      repeat( auto-fill, minmax(250px, 1fr) );
+    .fragment
+      iframe(data-src="examples/grids/5.html" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+    .fragment
+      .outside-link
+        a(href="examples/grids/5.html" target="_blank") open in new window
+
+  section(data-background-video="video/fancy-omar.mp4" data-background-video-loop="loop" data-background-size="contain")
+    //h3.shadowed Let's get even fancier
+    figure
+      img(src="img/fancier.png" style="max-width:600px;")
+
+  section
+    //-h4 Make rum drinks bigger!
+    pre
+      code.css.
+        .grid { 
+          grid-template-columns: repeat(4,1fr);
+        }
+
+        .mojito, .daiquiri, .pina-colada {
+          grid-column: span 2;
+          grid-row: span 2;
+        }
+
+  section
+    iframe(data-src="examples/grids/6.html" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+    
+  
+  section
+
+    pre
+      | HTML
+      code.html.
+        <figure class="tulip pina-colada">...</figure>
+        <figure class="collins screwdriver">...</figure>
+        <figure class="martini mojito">...</figure>
+        <figure class="collins cuba-libre">...</figure>
+        <figure class="tulip tequila-sunrise">...</figure>
+        <figure class="tulip sex-on-the-beach">...</figure>
+        <figure class="martini daiquiri">...</figure>
+        <figure class="martini manhattan">...</figure>
+        <figure class="collins bloody-mary">...</figure>
+        <figure class="collins long-island">...</figure>
+        <figure class="martini porto-flip">...</figure>
+        <figure class="margarita">...</figure>
+
+  section
+    iframe(data-src="examples/grids/7-before.html" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+  
+  section
+    pre
+      | css
+      code.css.
+        .collins   { order: 1; }
+        .martini   { order: 2; }
+        .tulip     { order: 3; }
+        .margarita { order: 4; }
+  
+  section
+    iframe(data-src="examples/grids/7.html" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")

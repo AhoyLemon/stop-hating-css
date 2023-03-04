@@ -1,0 +1,73 @@
+section
+
+  section
+    h1
+      code float
+
+  section(data-background="img/gif/witch.gif")
+    h1
+      code.shadowed float
+
+  section
+    pre(style="font-size:2.25rem;")
+      code.html.
+        &lt;article&gt;
+          &lt;img class=&quot;float-left&quot; src=&quot;...&quot; /&gt;
+          &lt;p&gt;...&lt;/p&gt;
+          &lt;p&gt;...&lt;/p&gt;
+        &lt;/article&gt;
+
+  section
+    h4 when float works
+    iframe(data-src="examples/float-good.html" data-preload="false" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+
+  section
+    h4 when float doesn't work
+    iframe(data-src="examples/float-bad.html" data-preload="false" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+    h3(style="margin-top:-24vh; padding-left:4em") 
+      span.black.fragment WHY!!!???
+  
+  section
+    h3 Can you fix it?
+    p.fragment Of course.
+
+  section
+    pre.huge
+      code.css.
+        .container:after { 
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+  section
+    h4 when float is fixed
+    iframe(data-src="examples/float-fixed.html" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+    h4(style="margin-top:-24vh; padding-left:5em;") 
+      span.black.fragment 
+        a(href="examples/float-fixed.html" target="_blank" style="color:#222") Why does this work?
+
+  
+  section
+    h3 Okay, so let's make a layout with floats!
+
+
+  section
+    iframe(data-src="examples/float-grid-perfect.html" style="width:100%; height:62vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+  
+  section
+    code CSS
+    pre.huge
+      code.css.
+        .riker {
+          float: left;
+          width: calc(33% - 30px);
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+        
+  section
+    //-h4 what actually happens
+    iframe(data-src="examples/float-grid.html" style="width:100%; height:62vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+
+

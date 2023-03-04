@@ -1,0 +1,45 @@
+section
+
+  section
+    img(src="img/bg/9-css-in-js-this-year.png")
+
+  section(data-background-video="video/cascade.mp4" data-autoplay data-background-video-loop="loop" data-background-video-muted="muted" autoplay)
+    h1.shadowed The Cascade
+
+  section
+
+    b The Cascade:
+    ol
+      li individual rules
+      li calculated in order
+      li of increasing specificity
+      li with id's getting extreme priority
+      li only beat by inline styles
+      li and 
+        code(style="color:red") !important
+        |  being the nuclear option
+
+  section
+    code HTML
+    pre
+      code.HTML.
+        <article>
+          <p class="p-one" id="MyParagraph"></p>
+          <a href="page.html" class="link"></a>
+        </article>
+    .fragment
+      code CSS
+      pre
+        code.css.
+          article p { background: orange; }
+          #MyParagraph { color:red; }
+          p { background: green; }
+          a.link { background:blue; }
+          a[href] { color:yellow; }
+          a { background:green; }
+
+  section
+    iframe(data-src="examples/cascade.html" style="width:100%; height:55vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+    .outside-link
+        a(href="examples/cascade.html" target="_blank") open in new window
+

@@ -1,0 +1,60 @@
+section
+
+  section
+    h1
+      code flex
+
+  section
+    iframe(data-src="examples/riker-grid-flex.html" style="width:100%; height:60vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+  
+  section
+    pre
+      code.css.
+        .all-rikers { 
+          display: flex;
+          flex-wrap:wrap;
+          justify-content: space-between;
+        }
+        .riker { 
+          flex-basis:calc(33% - 15px);
+          flex-grow: 0;
+          flex-shrink:1;
+          margin-bottom:30px;
+        }
+  
+  section
+    p
+      | Flex can be used 
+      i with
+      |  or 
+      i instead of
+      |  CSS grid
+
+  section
+    pre
+      code.css.
+        .flex-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+  
+  section
+    iframe(data-src="examples/flex-flexible.html" style="width:100%; height:60vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
+
+  section
+    p Vertical Centering with Flex!
+
+  section
+    pre(style="font-size:2vw;")
+      code.css.
+        .flex-container {
+          display: flex;
+          align-items: center;
+          /* ^- vertical */
+          justify-content: center;
+          /* ^- horizontal */
+        }
+  
+  section
+    iframe(data-src="examples/flex-center.html" style="width:100%; height:60vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)")
