@@ -1,7 +1,7 @@
 section
 
   section
-    .grid(columns="3")
+    .grid#TechGrid(columns="3")
       .box
         img(src="svg/logos/pug.svg")
       .box.fragment
@@ -20,9 +20,11 @@ section
         img(src="svg/logos/beer.svg")
       .box.fragment
         img(src="img/logos/gin.jpg")
+    style.
+      #TechGrid img { max-height: 18vh; }
 
   section
-    .grid(columns="3")
+    .grid#TechGrid(columns="3")
       .box
         img(src="svg/logos/html-5.svg")
       .box
