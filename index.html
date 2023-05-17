@@ -46,16 +46,6 @@
             <div class="a-talk-by" style="margin-top:35.5vh;"><b class="white shadowed">(a talk by @AhoyLemon)</b></div>
           </section>
         <!-- Jinjo Crew (Korea) vs The Ruggeds (Netherlands)-->
-          <section data-background-iframe="https://www.youtube.com/embed/jSZ9QB5Myw4?start=60&amp;fs=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;disablekb=1" data-background-interactive>
-            <aside class="notes">
-              <h2>BATTLE OF THE YEAR 2021</h2>
-              <p>Jinjo Crew (Korea)</p>
-              <p>vs</p>
-              <p>The Ruggeds (Netherlands)</p>
-            </aside>
-            <h2 class="shadowed">I'm Gonna Make You<br>Stop Hating CSS</h2>
-            <div class="a-talk-by" style="margin-top:35.5vh;"><b class="white shadowed">(a talk by @AhoyLemon)</b></div>
-          </section>
         <!-- Flying Step (Germany) vs Squadron (USA)-->
           <section data-background-iframe="https://www.youtube.com/embed/yBdXfKxVpV4?start=111&amp;fs=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;disablekb=1" data-background-interactive>
             <aside class="notes">
@@ -170,6 +160,45 @@
         <section data-background="img/gif/focus.gif">
           <h3 class="shadowed">Let's get weird!</h3>
         </section>
+        <section>
+          <h4 style="text-transform:upercase;">
+             Lyrics: <br> "Hocus Pocus" by Focus</h4>
+          <pre><code class="no-highlight" no-highlight lang="focus" style="line-height:170%; height:80vh;">Yodeadodoyodeadodoyodeadodoyodeadodo
+yodeadodoyodeadodoyo-bab-baaaaa
+Ahhhhhh-aaahhhh-aaaaaa-aaaaAAA!
+Ohhhhhh-ooohhh-oooooo-oooOOO!
+Yodeadodoyodeadodoyodeadodoyodeadodo
+yodeadodoyodeadodoyo-bab-baaaaa
+Ahhhhhh-aaahhhh-aaaaaa-aaaaAAA!
+Ohhhhhh-ooohhh-oooooo-oooOOO!
+umdub-adaoh-segel-ungucur-ungetu-hungetur-hupreyu
+undubea-unpedurl-humpelilly-luptodoro-licktetor-ulumpadero
+umbader-lickatine-lupator-lackatera
+batickatheplalera
+theblumpalumpadera
+ho?
+ho ho ha haaaa!
+Yodeadodoyodeadodoyodeadodoyodeadodo
+yodeadodoyodeadodoyo-bab-baaaaa
+Ahhhhhh-aaahhhh-aaaaaa-aaaaAAA!
+Ohhhhhh-ooohhh-oooooo-oooOOO!
+Bom bom bom bom
+Bom bom bom
+Bom bom bom bom bom bom bom
+Bom bom bom
+Bom bom bom
+Bom bom bom bom bom bom
+Bac bac bac bac bac backaaaaa!
+Yeeeeha!
+ba um um um um um
+ba um um um um um
+ba oooohhboooobooboboboooo!
+Yodeadodoyodeadodoyodeadodoyodeadodo
+yodeadodoyodeadodoyo-bab-baaaaa
+Ahhhhhh-aaahhhh-aaaaaa-aaaaAAA!
+Ohhhhhh-ooohhh-oooooo-oooOOO!
+Yeaah! Whoooo!</code></pre>
+        </section>
       </section>
       <!-- OVERFLOW-->
       <section>
@@ -267,10 +296,10 @@
         </section>
         <section><code>CSS</code>
           <pre class="huge"><code class="css">.box { 
-  border:0.1em solid white; 
+  border: 0.1em solid white; 
   width: 4em;
-  padding:0.3em;
-}argin-right:auto;
+  padding: 0.3em;
+  margin-right: auto;
 }
 </code></pre>
         </section>
@@ -305,10 +334,6 @@
         <section>
           <h4><code>postion:relative</code></h4>
           <iframe data-src="examples/relative.html" data-preload="false" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)"></iframe>
-        </section>
-        <section>
-          <h4><code>postion:absolute</code></h4>
-          <iframe data-src="examples/absolute.html" data-preload="false" style="width:100%; height:50vh; box-shadow:5px 5px 5px rgba(0,0,0,0.5)"></iframe>
         </section>
         <section>
           <h4><code>postion:fixed</code></h4>
@@ -457,7 +482,7 @@
         </section>
         <section>
           <h3>step 1</h3>
-          <pre class="fragment huge"><code data-line-numbers>.all-rikers { 
+          <pre class="fragment huge"><code class="language-css" data-line-numbers>.all-rikers { 
   display:grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap:30px;
@@ -587,8 +612,10 @@
       <!-- IE SUCKS. ALSO IE IS DEAD-->
       <section>
         <section data-background="img/bg/ie.png"></section>
-        <section data-background="img/bg/caniuse-grid-2022-ca.png"></section>
-        <section data-background="img/bg/caniuse-grid-2022-ca-relative.png"></section>
+        <section data-background="img/bg/ie-tombstone.jpg"></section>
+        <section>
+          <h2><a href="https://caniuse.com/?search=grid" target="_blank"><code>Can I use grid?</code></a></h2>
+        </section>
         <section>
           <p> <b>Takeaways:</b></p>
           <ul>
@@ -597,8 +624,9 @@
             <li>All other lackings in browsers 4+ years behind on updates</li>
           </ul>
         </section>
-        <section data-background="img/bg/caniuse-flex-2022-ca.png"></section>
-        <section data-background="img/bg/caniuse-flex-2022-ca-relative.png"></section>
+        <section>
+          <h2><a href="https://caniuse.com/?search=flex" target="_blank"><code>Can I use flex?</code></a></h2>
+        </section>
       </section>
       <!-- FLEX-->
       <section>
